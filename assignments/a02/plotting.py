@@ -70,8 +70,8 @@ for i in range(len(n)):
 #plotting using a scatter plot
 for i in range(len(n)):
     for j in range(20*i, 20+(20*i)):
-        plt.scatter(n[i], timesLoop[j], color = 'blue', label = "Using Function")
-        plt.scatter(n[i],timesFunction[j], color = 'red',label = "Using loops")
+        plt.scatter(n[i], timesLoop[j], color = 'blue', label = "Using loops")
+        plt.scatter(n[i],timesFunction[j], color = 'red',label = "Using function")
 
 
         
@@ -80,11 +80,11 @@ for i in range(len(n)):
 plt.legend()
 plt.title("Matrix-vector Multiply for 100 time points")
 
-#plt.xlim(2**8,2**14)
+plt.xlim(2**8,2**14)
 
 handles, labels = plt.gca().get_legend_handles_labels()
 by_label = dict(zip(labels, handles))
-plt.legend(by_label.values(), by_label.keys(), loc = 'upper right')
+plt.legend(by_label.values(), by_label.keys(), loc = 'upper left')
 
 plt.ylabel('Time in ms')
 plt.xlabel("n values")
@@ -102,11 +102,11 @@ plt.show()
 
 #for i in range(len(n)):
 for i in range(len(n)):
-        plt.plot([i] * 20, timesLoop[20*i:20+(20*i)], color = 'b', label = "Using Function")
-        plt.plot([i] * 20, timesFunction[20*i:20+(20*i)], color = 'r',label = "Using loops")
+        plt.plot([i] * 20, timesLoop[20*i:20+(20*i)], color = 'b', label = "Using loops")
+        plt.plot([i] * 20, timesFunction[20*i:20+(20*i)], color = 'r',label = "Using function")
 
 
-#plt.xlim(2**8,2**14)
+
 plt.ylabel('Time in ms')
 plt.xlabel("n values")
 #plt.yticks(fontsize=12, alpha=.7)
@@ -116,7 +116,7 @@ plt.title("Matrix-vector Multiply for 100 time points")
 
 handles, labels = plt.gca().get_legend_handles_labels()
 by_label = dict(zip(labels, handles))
-plt.legend(by_label.values(), by_label.keys(), loc = 'upper right')
+plt.legend(by_label.values(), by_label.keys(), loc = 'upper left')
 
 plt.xscale('log')    
 plt.yscale('linear')
