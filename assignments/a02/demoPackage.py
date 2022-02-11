@@ -1,6 +1,10 @@
+import numpy
+
+import random
 import pandas
 from lucifer import ProgressBar
 from time import sleep
+
 
 bar = ProgressBar(total=100)
 
