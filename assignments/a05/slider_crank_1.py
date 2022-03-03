@@ -231,9 +231,12 @@ application.AssetUpdateAll()
 application.SetTimestep(0.01)
 application.SetTryRealtime(True)
 
+
 times = []
 pos = []
 t = []
+times_torque = []
+
 #current_sim_time = int (system.GetChTime())
 start = time.time()
 while (application.GetDevice().run()):
@@ -264,9 +267,16 @@ while (application.GetDevice().run()):
 
     v = slider.GetPos()
     
+    # getting the torque value
+    torque = motor.GetMotorTorque()
+    
     # for i in range(current_sim_time, current_sim_time + 4):
-    times.append(time.time() - start)
+    times.append((time.time() - start))
     pos.append(v.x)
+    
+    if((time.time() - start) > 0.5):
+      times_torque.append(time.time() - start)
+      t.append(torque)
     
 
    
@@ -277,4 +287,12 @@ plt.plot(times, pos)
 plt.title("Position of slider wrt to time")
 plt.xlabel("Time in seconds")
 plt.ylabel("Position of slider")
+plt.show()
+
+#BONUS PART
+
+plt.plot(times_torque, t)
+plt.title("Torque of slider wrt to time")
+plt.xlabel("Time in seconds")
+plt.ylabel("Torque")
 plt.show()

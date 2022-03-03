@@ -315,6 +315,7 @@ application.SetTryRealtime(True)
 times = []
 pos = []
 t = []
+times_torque = []
 #current_sim_time = int (system.GetChTime())
 start = time.time()
 while (application.GetDevice().run()):
@@ -330,6 +331,8 @@ while (application.GetDevice().run()):
         chrono.ChCoordsysD(chrono.ChVectorD(0, 0, 0), chrono.Q_from_AngX(chrono.CH_C_PI_2)),
         chronoirr.SColor(255, 80, 100, 100), True)
     chronoirr.drawAllCOGs(system, application.GetVideoDriver(), 1)
+
+    
 
     ## Advance simulation by one step.
     application.DoStep()
@@ -348,12 +351,23 @@ while (application.GetDevice().run()):
     # for i in range(current_sim_time, current_sim_time + 4):
     times.append(time.time() - start)
     pos.append(v.x)
-    t.append(torque)
+    
+
+    if((time.time() - start) > 0.5):
+      times_torque.append(time.time() - start)
+      t.append(torque)
 
     
 plt.plot(times, pos)
 plt.title("Position of slider wrt to time")
 plt.xlabel("Time in seconds")
 plt.ylabel("Position of slider")
-plt.plot(times, torque)
+plt.show()
+
+#BONUS PART
+
+plt.plot(times_torque, t)
+plt.title("Torque of motor wrt to time")
+plt.xlabel("Time in seconds")
+plt.ylabel("Torque")
 plt.show()
