@@ -292,7 +292,7 @@ plt.show()
 #BONUS PART
 
 plt.plot(times_torque, t)
-plt.title("Torque of slider wrt to time")
+plt.title("Torque of motor wrt to time")
 plt.xlabel("Time in seconds")
 plt.ylabel("Torque")
 plt.show()
