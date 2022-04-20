@@ -1,0 +1,11 @@
+Loading PTX: /home/me468/chrono/build/lib/sensor_ptx/ChronoEngine_sensor_generated_box.cu.ptx
+Loading PTX: /home/me468/chrono/build/lib/sensor_ptx/ChronoEngine_sensor_generated_sphere.cu.ptx
+Loading PTX: /home/me468/chrono/build/lib/sensor_ptx/ChronoEngine_sensor_generated_cylinder.cu.ptx
+Loading PTX: /home/me468/chrono/build/lib/sensor_ptx/ChronoEngine_sensor_generated_material_shaders.cu.ptx
+Loading PTX: /home/me468/chrono/build/lib/sensor_ptx/ChronoEngine_sensor_generated_camera.cu.ptx
+Loading PTX: /home/me468/chrono/build/lib/sensor_ptx/ChronoEngine_sensor_generated_lidar.cu.ptx
+Loading PTX: /home/me468/chrono/build/lib/sensor_ptx/ChronoEngine_sensor_generated_radar.cu.ptx
+Loading PTX: /home/me468/chrono/build/lib/sensor_ptx/ChronoEngine_sensor_generated_miss.cu.ptx
+Shader compile time: 2.93017
+WARNING: requested window could not be created by GLFW. Will proceed with no window.
+Sim time: 20.0 Wall time: 1.8366765975952148
