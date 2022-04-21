@@ -70,7 +70,7 @@ fEuler(10**(-4))
 h_vals = np.array([10** (-1),10** (-2),10** (-3), 10** (-4), 10** (-5)])
 error_pos = np.zeros(5)
 error_vel = np.zeros(5)
-for i in np.arange(h_vals.size):
+for i in np.arange(0,h_vals.size):
     error_pos[i] = fEuler(h_vals[i])[0]
     error_vel[i] = fEuler(h_vals[i])[1]
 
